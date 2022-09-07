@@ -5,12 +5,12 @@ const mysql = require("./models/config/mysql"); // mysql
 const app = express(); // express 사용
 
 // 라우팅
-const indexRoute = require("./routes/home/index");
+const indexRoute = require("./src/routes/home/index");
 app.use("/", indexRoute);
 
 // view엔진 설정
 app.set('view engine', 'ejs');
-app.set("views", "./views");
+app.set("views", "./src/views");
 
 // 정적파일(js,css,image 등) 설정
 app.use(express.static(__dirname + "/public"));
