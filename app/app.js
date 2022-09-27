@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.set("views", "./src/views");
 
 // 정적파일(js,css,image 등) 설정
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/src/public"));
 
 let conn = mysql.conn;
 
