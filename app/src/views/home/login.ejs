@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
+    <link rel="stylesheet" href="/css/login.css">
     <script src="/js/login.js"></script>
 </head>
 <body>
-    <h1>여기는 로그인 페이지</h1>
-    <form method="get" action="">
-        <div>
-            <label for="userId" style="display: inline-block; width : 100px">아이디</label>
-            <input type="text" id="userId">
+    <div class="login-page">
+        <div class="form">
+          <form class="register-form">
+            <input type="text" placeholder="name"/>
+            <input type="password" placeholder="password"/>
+            <input type="text" placeholder="email address"/>
+            <button>create</button>
+            <p class="message">회원가입 하셨나요? <a href="#">로그인</a></p>
+          </form>
+          <form class="login-form">
+            <input id="userid" type="text" placeholder="아이디"/>
+            <input id="userpwd" type="password" placeholder="비밀번호"/>
+            <button id="loginBtn">로그인</button>
+            <p class="message">회원가입 안하셨나요? <a href="#">회원가입</a></p>
+          </form>
         </div>
-        <div>
-            <label for="userPwd" style="display: inline-block; width : 100px">비밀번호</label>
-            <input type="text" id="userPwd">
-        </div>
-        <div>
-            <button type="button" id="loginBtn">로그인</button>
-        </div>
-    </form>
-
+      </div>
 </body>
 </html>
+
+<!--Copyright (c) 2022 by Aigars Silkalns (https://codepen.io/colorlib/pen/rxddKy)-->
