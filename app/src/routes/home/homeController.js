@@ -23,7 +23,9 @@ const process = {
     },
     
     postRegister : (req, res) => {
-        
+        const user = new User(req.body);
+        const response = user.register();
+        return res.json(response);        
     }
 }
 

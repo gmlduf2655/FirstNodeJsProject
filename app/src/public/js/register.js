@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function(){
     function register() {
         const req = {
             id : userId.value,
-            pwd : userPwd.value
+            pwd : userPwd.value,
+            name : userName.value
         };
         
         fetch("/register", {
