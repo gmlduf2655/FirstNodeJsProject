@@ -8,6 +8,10 @@ const output = {
 
     getLogin : (req, res) => {
         res.render("home/login")
+    },
+
+    getRegister : (req, res) => {
+        res.render("home/register");
     }
 };
 
@@ -15,9 +19,12 @@ const process = {
     postLogin : (req,res) => {
         const user = new User(req.body);
         const response = user.login();
-        console.log(response);
         return res.json(response);
-    }   
+    },
+    
+    postRegister : (req, res) => {
+        
+    }
 }
 
 module.exports = {
