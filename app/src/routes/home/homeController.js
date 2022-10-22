@@ -16,9 +16,10 @@ const output = {
 };
 
 const process = {
-    postLogin : (req,res) => {
+    postLogin : async (req,res) => {
         const user = new User(req.body);
-        const response = user.login();
+        const response = await user.login();
+        console.log(response);
         return res.json(response);
     },
     

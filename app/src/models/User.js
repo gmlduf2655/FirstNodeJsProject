@@ -5,9 +5,11 @@ class User{
         this.body = body;
     }
 
-    login(){
+    async login(){
         const client = this.body;
-        const userInfo = UserStorage.getUserInfo(client.id);
+        const userInfo = await UserStorage.getUserInfo(client.id);
+        console.log(client);
+        console.log(userInfo);
         if(client.id === userInfo.id){
             if(client.pwd === userInfo.pwd){
                 return { success : true, msg : "로그인에 성공하셨습니다"};
