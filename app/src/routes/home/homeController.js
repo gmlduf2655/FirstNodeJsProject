@@ -23,10 +23,11 @@ const process = {
         return res.json(response);
     },
     
-    postRegister : (req, res) => {
+    postRegister : async (req, res) => {
         const user = new User(req.body);
-        const response = user.register();
-        return res.json(response);        
+        const response = await user.register();
+        return res.json(response); 
+     
     }
 }
 

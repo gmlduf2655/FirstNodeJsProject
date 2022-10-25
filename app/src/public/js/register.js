@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function(){
             console.log("[응답 결과]");
             console.log(res);
             if(res.success){
-                location.href = "/login";
+                //location.href = "/login";
             }else{
                 alert(res.msg);        
             }
